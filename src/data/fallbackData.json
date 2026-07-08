@@ -1,0 +1,2228 @@
+{
+  "CATEGORY_MASTER": [
+    {
+      "Resolution Code": "Appointment type changed",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "DPs Odometer value incorrect",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Copy paste functionality disabled",
+      "Category": "Security changes",
+      "Sub Category": "Business requirment"
+    },
+    {
+      "Resolution Code": "Filter not working",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "CRM Slowness-DB high issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "CRM Not working- Connection error",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Password expired 28 days",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance"
+    },
+    {
+      "Resolution Code": "Contact Number Masking",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance"
+    },
+    {
+      "Resolution Code": "User profile related issue",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance"
+    },
+    {
+      "Resolution Code": "User system error",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance"
+    },
+    {
+      "Resolution Code": "User not responding",
+      "Category": "User Guidance",
+      "Sub Category": "User Not Responding"
+    },
+    {
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance"
+    },
+    {
+      "Resolution Code": "Bulk Messaging - New feature",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance"
+    },
+    {
+      "Resolution Code": "Dialer issue",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "Login Issues",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "Login Issue-COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Dialer issue-TCL",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "CRM Not Working Common - Invalid VIN No",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "TCL Dialer - Spam Number",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "Hyperlocal duplicate lead issue dps",
+      "Category": "Third Party Dependency",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Bodyshop related",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Clear Quote"
+    },
+    {
+      "Resolution Code": "Customer details not visible-COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "TCL Dialer - voice not coming",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "Loyalty point issue",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "TCL - Whatsapp Message Failed",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "Time slot not working-COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Appointment not working-COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "TCL Dialer - Call not coming to customer",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "Website Lead Related",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Webiste Issues"
+    },
+    {
+      "Resolution Code": "CRM not working- Common",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Real Time issue",
+      "Category": "Third Party Dependency",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Password reset issue- COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Service History issue SMR",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Service history not working-COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "TCL recording not available",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "PSF Data not received",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Vehicle not found",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Details mismatch in DMS & CRM",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Service History issue PSF",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Wrong SMR related",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Appointment Data Not Received from DPS",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "PSF Complaint Related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "PSF Related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Lead Not Remove After Submit",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "NPS Related Query",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Appointment Issue-AutoVYN",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Data Related Issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Hyperlocal Lead related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Marketing Campaign",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "BOT leads related",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Report related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Data not showing",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Unable to Mark DNC",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "CRM Not working PSF-504",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Unable to submit Remark",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "CRM Not working- AutoVYN",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Mobile App Related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Lead Knock off",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Total Calls not visible",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Attempt Not Updated",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Other Reasons",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "CRM Slowness Issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Interaction history Issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Filter not working",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "PSF data transfer Issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "CRM Dashboard issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "SMR Due Date Wise Report not Generating",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "SMR data transfer related",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Password too complex for users",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance"
+    },
+    {
+      "Resolution Code": "Job card related issue",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "User guidance ( Soft Phone related issue )",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "Welcome calls not visible",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Disposition not visible TCL",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "OTP Issue- COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Incoming call logs not visible",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "TCL-Incoming call issue",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer"
+    },
+    {
+      "Resolution Code": "AMIE & KARA Related",
+      "Category": "Third Party Dependency",
+      "Sub Category": "AMIE & KARA"
+    },
+    {
+      "Resolution Code": "Login issue firewall",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Firewall"
+    },
+    {
+      "Resolution Code": "Email not verified in common",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Global search not working-COM",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "Pick and drop location related",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "DB Pulling Issue",
+      "Category": "Third Party Dependency",
+      "Sub Category": "AWS"
+    },
+    {
+      "Resolution Code": "Dealer issue Autovyn (Db high)",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Service Type issue Autovyn",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related"
+    },
+    {
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1"
+    },
+    {
+      "Resolution Code": "Data not recived from DPS",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice"
+    },
+    {
+      "Resolution Code": "PSF Data related issue ",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related"
+    },
+    {
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request "
+    }
+  ],
+  "DUMP": [
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43634",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "User system error",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43576",
+      "Issue Discription": "FRESH DATA NOT SHOWING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43533",
+      "Issue Discription": "RE: Evaluation app not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43883",
+      "Issue Discription": "FW: Support Required \u2013 Job Card Opening Issue (MANACO 0681-01) WB01AC7126",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43810",
+      "Issue Discription": "double id has been issued to the same person",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43691",
+      "Issue Discription": "RE: Account Login Credentials - Maruti ITSM",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43613",
+      "Issue Discription": "Unable to Login as OTP not receiving to registered mobile Nos",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43414",
+      "Issue Discription": "Complaint Portal Not Working - Pandit Automobiles",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43871",
+      "Issue Discription": "Group CCM SMR id not able to login after otp verified",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43760",
+      "Issue Discription": "DATA NOT REFLECTED IN CRM",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43799",
+      "Issue Discription": "ID NOT LOGGING IN",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43699",
+      "Issue Discription": "Pending Appointments Before Jan'26 & Reported Appointment Still Showing in Pending Appointments.",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43898",
+      "Issue Discription": "FW: Support Required \u2013 Job Card Opening Issue (MANACO 0681-01) WB01AC7126",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43578",
+      "Issue Discription": "in speed dailing call to one customer call not recive but in same customer if call to alernative number then call connected to another customer please resolve",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL dialer - call not coming to agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-01",
+      "Ticket No.": "INC_43711",
+      "Issue Discription": "Appointment Not Punching And history not showing RJ18TA6016",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Vehicle not found",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related",
+      "Status": "Pending"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44086",
+      "Issue Discription": "SMR Due DUMP Not Genre ted",
+      "Ticket Type": "Incident",
+      "Resolution Code": "User system error",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44168",
+      "Issue Discription": "lead not genrated",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44185",
+      "Issue Discription": "SMRE'S NAME NOT REFLECTING CORRECT IN CRM ID",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44112",
+      "Issue Discription": "cant punch marketting campaign data",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44205",
+      "Issue Discription": "psf data not reflected on cce id",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44290",
+      "Issue Discription": "oulet location not showing in admin id AAM-01",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44320",
+      "Issue Discription": "psf pending data not shown",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44284",
+      "Issue Discription": "punched leads showing again in crm",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44284",
+      "Issue Discription": "punched leads showing again in crm",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43933",
+      "Issue Discription": "CCM CRM ID NOT OPEN",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43912",
+      "Issue Discription": "SMR ID DATA NOT SHOW IN SYSE",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43933",
+      "Issue Discription": "CCM CRM ID NOT OPEN",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43912",
+      "Issue Discription": "SMR ID DATA NOT SHOW IN SYSE",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44114",
+      "Issue Discription": "after login OTP is not coming under given mobile number as its showing lgin credinals failed error.",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43957",
+      "Issue Discription": "Regarding N Month Data mistmatching issue",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44073",
+      "Issue Discription": "DExC app otp not received",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44003",
+      "Issue Discription": "unable to cancel appointment in crm",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44220",
+      "Issue Discription": "RE: CRM vs BI Booking Data Discrepancy - Request for Correction",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44087",
+      "Issue Discription": "PSF Data worng ID allocate",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44187",
+      "Issue Discription": "NEW ADMIN ID NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44383",
+      "Issue Discription": "Unable to login - 1456297",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44379",
+      "Issue Discription": "Unable to fetch data from 'Total Calls'",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44319",
+      "Issue Discription": "PASSWORD RESET REQUEST FOR ID 596501CCM00001",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44267",
+      "Issue Discription": "Need to change the Email id and Mobile number of Dealer Admin ID of Dexc",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44387",
+      "Issue Discription": "LOGIN ISSUE",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43877",
+      "Issue Discription": "Bodyshop leads damage images are not views",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Bodyshop related",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Clear Quote",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43443",
+      "Issue Discription": "Dealer Code Close and Transfer",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request ",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43544",
+      "Issue Discription": "MASS PSD Data Required - June'26",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request ",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43443",
+      "Issue Discription": "Dealer Code Close and Transfer",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request ",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43544",
+      "Issue Discription": "MASS PSD Data Required - June'26",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request ",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43986",
+      "Issue Discription": "Marketing Campaign Data Removal",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request ",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44297",
+      "Issue Discription": "REGISTRATION NO IS NOT VALID",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Vehicle not found",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "#INC_44411",
+      "Issue Discription": "2 PSF LEADS NOT SHOWING FOR 1 CUSTOMER",
+      "Ticket Type": "Incident",
+      "Resolution Code": "PSF Data related issue ",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43953",
+      "Issue Discription": "PMS DUE WRONGLY GENERATE 1ST FREE SERVICE",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Details mismatch in DMS & CRM",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_44277",
+      "Issue Discription": "duplicate complaint in portal CRM",
+      "Ticket Type": "Incident",
+      "Resolution Code": "PSF Complaint Related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-02",
+      "Ticket No.": "INC_43917",
+      "Issue Discription": "Require vehicle reg. no. for mentioned phone numbers",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request ",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44112",
+      "Issue Discription": "cant punch marketting campaign data",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44638",
+      "Issue Discription": "CRM BOT",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44541",
+      "Issue Discription": "NOT SHOWING TOTAL DATA IN CRM",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44736",
+      "Issue Discription": "today psf not showing in cce id",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44729",
+      "Issue Discription": "BOOKING NOT GENRATED",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44336",
+      "Issue Discription": "UNABLE TO ALLOCATE DATA",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44817",
+      "Issue Discription": "Data Reassign issue",
+      "Ticket Type": null,
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44670",
+      "Issue Discription": "PSF CHECKLIST NOT GENERATING",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44668",
+      "Issue Discription": "PSF LEADS NOT SHOWING IN CCE ID and CCM ID",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44808",
+      "Issue Discription": "SERVCIE ALREADY DONE BUT SHOW IN FREE SERVICE RETENSION",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44411",
+      "Issue Discription": "2 PSF LEADS NOT SHOWING FOR 1 CUSTOMER",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44815",
+      "Issue Discription": "Data Reassign issue",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44730",
+      "Issue Discription": "Already Postponed Appointments of Yesterday shaws on Today Booking",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44649",
+      "Issue Discription": "CRM error",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44813",
+      "Issue Discription": "Data Reassign issue",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44494",
+      "Issue Discription": "SMR bot lead showing in un-allocated",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44531",
+      "Issue Discription": "Unable to login Security ID",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Login issues",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44387",
+      "Issue Discription": "LOGIN ISSUE",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Login issues",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44528",
+      "Issue Discription": "SMART EYE LEADS NOT SHOWN",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Bodyshop related",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Clear Quote",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44772",
+      "Issue Discription": "Add all MASS IDs to one ID - MASS ALL Admin",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Service Request ",
+      "Category": "Service Request ",
+      "Sub Category": "Service Request ",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44609",
+      "Issue Discription": "Wrong data punch",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Details mismatch in DMS & CRM",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44608",
+      "Issue Discription": "duplicate complaint in portal CRM",
+      "Ticket Type": "Incident",
+      "Resolution Code": "PSF Complaint Related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44415",
+      "Issue Discription": "duplicate complaint in portal CRM",
+      "Ticket Type": "Incident",
+      "Resolution Code": "PSF Complaint Related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44781",
+      "Issue Discription": "The vehicle number KA03MR181 is associated with multiple complaint ID numbers. Please check and resolve the issue.",
+      "Ticket Type": "Incident",
+      "Resolution Code": "PSF Complaint Related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44565",
+      "Issue Discription": "customer repeated",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Data related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-03",
+      "Ticket No.": "INC_44665",
+      "Issue Discription": "New ID created and data assigned but data not showing against their name in SMR due date wise dump.",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Data related issue",
+      "Category": "Dealer CRM Application issue",
+      "Sub Category": "Dealer CRM Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45326",
+      "Issue Discription": "airtel warning issue",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Spam Number",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44917",
+      "Issue Discription": "ccm psf not login",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44914",
+      "Issue Discription": "H1010CCM00001 - .requesting for to disable bolt call after 8 pm call",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45128",
+      "Issue Discription": "fresh data not show",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45317",
+      "Issue Discription": "Gate In/Out Issue",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45182",
+      "Issue Discription": "Unable To login",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45144",
+      "Issue Discription": "CRM NOT LOGIN",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45197",
+      "Issue Discription": "CRM LOGIN NAHI HO RAHA",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45027",
+      "Issue Discription": "The Nexa workshop PSF and complaint handling have been merged at our location, which has impacted the reporting process.",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45300",
+      "Issue Discription": "fresh data not show",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45034",
+      "Issue Discription": "CRM PASSWORD LOGIN ISSUE",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45169",
+      "Issue Discription": "BOT LEAD NOT SUBMITTED",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45121",
+      "Issue Discription": "cmc id not open",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45396",
+      "Issue Discription": "data not show in SMre id",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45189",
+      "Issue Discription": "appointment is not getting rescheduled.",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45043",
+      "Issue Discription": "APPOINTMENT PUNCH NHI HO RHI HAI",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45037",
+      "Issue Discription": "ENABLE TO PUCH APPIONTMENT ON CRM",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45000",
+      "Issue Discription": "Unable to Reset Password of RSM ID",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44910",
+      "Issue Discription": "PSF DUE DATA NOT DISPLAYED",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45152",
+      "Issue Discription": "Regarding after Ticket raise I could not log in to my CRM ID to Track Ticket status",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44896",
+      "Issue Discription": "otp not send",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45024",
+      "Issue Discription": "NOT GOING FORWARD AFTER ENTERING THE OTP. JUST SHOWING ONLY 'OTP VERIFIED'.",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45247",
+      "Issue Discription": "CCM ID NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45507",
+      "Issue Discription": "CEI NPS REPORT DOWNLOAD ISSUE`",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45191",
+      "Issue Discription": "Call is not happen",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45195",
+      "Issue Discription": "call is not audible",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45257",
+      "Issue Discription": "calls not landing",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45053",
+      "Issue Discription": "calls not landing",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45293",
+      "Issue Discription": "CRM NOT WORKING SPEED AND AUTO DIALER NOT CONNECTED",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45267",
+      "Issue Discription": "repeat cus",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45068",
+      "Issue Discription": "CRM NOT WORKING // call nahi lag rahe hai",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45288",
+      "Issue Discription": "CRM not working speed and autodialer not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45251",
+      "Issue Discription": "calls not connecting",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45294",
+      "Issue Discription": "CRM NOT WORKING SPEED AND AUTO DIALER NOT CONNECTED",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45186",
+      "Issue Discription": "crm ma booking resudle nathi thati",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45237",
+      "Issue Discription": "DEXC auto dialing speed dialing not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "TCL Dialer - Call not coming to Agent",
+      "Category": "Third Party Dependency",
+      "Sub Category": "TCL Dialer",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45094",
+      "Issue Discription": "CMR NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45132",
+      "Issue Discription": "crm not working call not punch",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44972",
+      "Issue Discription": "REMARKS NOT PUNCH",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45167",
+      "Issue Discription": "CRM NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45124",
+      "Issue Discription": "Service appointment not taken",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45076",
+      "Issue Discription": "submit button not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45202",
+      "Issue Discription": "service typ was not anabled",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44961",
+      "Issue Discription": "crm not work",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45224",
+      "Issue Discription": "CRM IS NOT WORKING PROPERLY",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45086",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45070",
+      "Issue Discription": "CRM",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45063",
+      "Issue Discription": "CRM NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45140",
+      "Issue Discription": "crm issue",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44945",
+      "Issue Discription": "CRM NOT WORKING PROPERLY",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44949",
+      "Issue Discription": "CRM is not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44954",
+      "Issue Discription": "WORKING IS VERY SLOW",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45107",
+      "Issue Discription": "remarks not close",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45231",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44968",
+      "Issue Discription": "VERY VERY SLOW",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45101",
+      "Issue Discription": "CRM not Working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45077",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45060",
+      "Issue Discription": "crm not wrorking",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45089",
+      "Issue Discription": "CRM not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45085",
+      "Issue Discription": "app postpone issue",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45067",
+      "Issue Discription": "DEXC NOT WORKING, UNABLE TO SEARCH VEHICLE HISTORY",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44912",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45014",
+      "Issue Discription": "CRM Not Working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45286",
+      "Issue Discription": "To reassign fresh call of WM mujjafer is not showing in reassignment window list",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45126",
+      "Issue Discription": "dcxc not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44956",
+      "Issue Discription": "DEXC IS NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45241",
+      "Issue Discription": "crm",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45050",
+      "Issue Discription": "CRM NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45135",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45114",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45093",
+      "Issue Discription": "CRM not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45064",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45084",
+      "Issue Discription": "CRM NOT PROPER WORKING CONTINUE REFRESH KRNA PDH RHA H",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45082",
+      "Issue Discription": "DEXC IS NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44991",
+      "Issue Discription": "CRM is not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45279",
+      "Issue Discription": "CRM NOR WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_44959",
+      "Issue Discription": "crm not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45283",
+      "Issue Discription": "dexc not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "CRM Slowness Due TO Common API Taking Time",
+      "Category": "Third Party Dependency",
+      "Sub Category": "Common Microservice",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-04",
+      "Ticket No.": "INC_45264",
+      "Issue Discription": "name issue",
+      "Ticket Type": "Service Request",
+      "Resolution Code": "Details mismatch in DMS & CRM",
+      "Category": "DPS Data Related",
+      "Sub Category": "DPS Related",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45624",
+      "Issue Discription": "data reallocated but not show in individual smre",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L1",
+      "Sub Category": "Revert back to L1",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45623",
+      "Issue Discription": "APPOINTMENT NOT BOOK",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L2",
+      "Sub Category": "Revert back to L2",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45615",
+      "Issue Discription": "Wrong Number update",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L3",
+      "Sub Category": "Revert back to L3",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45547",
+      "Issue Discription": "ID NOT LOGIN",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Revert back no response",
+      "Category": "Revert back to L4",
+      "Sub Category": "Revert back to L4",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45552",
+      "Issue Discription": "Unable to download NPS report",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45569",
+      "Issue Discription": "crm is not working",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45594",
+      "Issue Discription": "CRM NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45590",
+      "Issue Discription": "CRM system is not working properly.",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45573",
+      "Issue Discription": "UNABLE TO SEE TODAY APPOINTMENT & FUTURE APPOINTMENTS",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45589",
+      "Issue Discription": "CRM TODAY BOOKING, FUTURE BOOKING ARE SHOWING WRONG",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45592",
+      "Issue Discription": "APOINMANT NOT SHOWING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45572",
+      "Issue Discription": "today booking and future booking not show in crm",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45591",
+      "Issue Discription": "Today booking call not shown",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45593",
+      "Issue Discription": "'No Appointment booking are showing up on my CRM ID Today",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    },
+    {
+      "Date": "2026-07-05",
+      "Ticket No.": "INC_45574",
+      "Issue Discription": "CRM NOT WORKING",
+      "Ticket Type": "Incident",
+      "Resolution Code": "Application usage guidance to user",
+      "Category": "User Guidance",
+      "Sub Category": "User Guidance",
+      "Status": "Resolved"
+    }
+  ],
+  "SUMMARY": [
+    {
+      "Date": "2026-07-01",
+      "Dealer CRM Application issue": null,
+      "DPS Data Related": 1,
+      "Revert back to L1": 4.0,
+      "Service Request": null,
+      "Third Party Dependency": 1,
+      "User Guidance": 9,
+      "Grand Total": 15,
+      "Pending": 14,
+      "Resolved": 1
+    },
+    {
+      "Date": "2026-07-02",
+      "Dealer CRM Application issue": 1.0,
+      "DPS Data Related": 3,
+      "Revert back to L1": 8.0,
+      "Service Request": 6.0,
+      "Third Party Dependency": 1,
+      "User Guidance": 17,
+      "Grand Total": 36,
+      "Pending": 0,
+      "Resolved": 36
+    },
+    {
+      "Date": "2026-07-03",
+      "Dealer CRM Application issue": 5.0,
+      "DPS Data Related": 1,
+      "Revert back to L1": 4.0,
+      "Service Request": 1.0,
+      "Third Party Dependency": 3,
+      "User Guidance": 12,
+      "Grand Total": 26,
+      "Pending": 0,
+      "Resolved": 26
+    },
+    {
+      "Date": "2026-07-04",
+      "Dealer CRM Application issue": null,
+      "DPS Data Related": 1,
+      "Revert back to L1": null,
+      "Service Request": null,
+      "Third Party Dependency": 55,
+      "User Guidance": 23,
+      "Grand Total": 79,
+      "Pending": 0,
+      "Resolved": 79
+    },
+    {
+      "Date": "Grand Total",
+      "Dealer CRM Application issue": 6.0,
+      "DPS Data Related": 6,
+      "Revert back to L1": 16.0,
+      "Service Request": 7.0,
+      "Third Party Dependency": 60,
+      "User Guidance": 61,
+      "Grand Total": 156,
+      "Pending": 14,
+      "Resolved": 142
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Debug / utility scripts (not part of the app)
+check_*.py
+find_*.py
+count_*.py
+inspect_*.py
+print_*.py
+convert_*.py
+classify_*.py
+verify_*.py
+test_*.py
+simulate_*.py
+get_parsed_counts.*
+test_live_csv_parser.cjs
+print_autovyn_tickets.cjs
+print_autovyn_subcats.cjs
+print_headers_live.cjs
+test_parser.js
+download_sheet.py
+
+# Excel / data files
+*.xlsx
+sheet.xlsx
