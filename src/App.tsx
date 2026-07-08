@@ -12,7 +12,9 @@ import {
   AlertTriangle,
   ShieldCheck,
   X,
+  LogOut,
 } from 'lucide-react';
+import { Login } from './components/Login';
 
 // ── Helper: format date for display ──────────────────────────────────────────
 function fmtDate(d: string) {
@@ -32,6 +34,9 @@ function App() {
   const [availableDates, setAvailableDates] = useState<string[]>([]);
   const [syncTime, setSyncTime] = useState<string>('');
   const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    return sessionStorage.getItem('unify_authenticated') === 'true';
+  });
 
   const fetchData = async (isRefresh = false) => {
     if (isRefresh) setRefreshing(true);
@@ -62,7 +67,15 @@ function App() {
     }
   };
 
-  useEffect(() => { fetchData(); }, []);
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchData();
+    }
+  }, [isAuthenticated]);
+
+  if (!isAuthenticated) {
+    return <Login onLoginSuccess={() => setIsAuthenticated(true)} />;
+  }
 
   if (loading) {
     return (
@@ -195,6 +208,19 @@ function App() {
               <RefreshCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin' : ''}`} />
               {refreshing ? 'Syncing…' : 'Sync Sheet'}
             </button>
+
+            {/* Logout */}
+            <button
+              onClick={() => {
+                sessionStorage.removeItem('unify_authenticated');
+                setIsAuthenticated(false);
+              }}
+              className="flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shadow-sm transition-all"
+              title="Sign Out"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              Sign Out
+            </button>
           </div>
         </div>
       </header>
@@ -283,8 +309,8 @@ function App() {
           <div className="lg:col-span-1">
             <StatusChart
               resolved={resolved - serviceRequestResolved}
-              pending={pending - (serviceRequestTickets.length - serviceRequestResolved)}
-              serviceRequests={serviceRequestTickets.length}
+              pending={pending}
+              serviceRequests={serviceRequestResolved}
               totalTickets={total}
               totalResolved={resolved}
             />
