@@ -11,6 +11,7 @@ import {
   Database,
   AlertTriangle,
   ShieldCheck,
+  X,
 } from 'lucide-react';
 
 // ── Helper: format date for display ──────────────────────────────────────────
@@ -29,6 +30,8 @@ function App() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [availableDates, setAvailableDates] = useState<string[]>([]);
+  const [syncTime, setSyncTime] = useState<string>('');
+  const [showBanner, setShowBanner] = useState<boolean>(true);
 
   const fetchData = async (isRefresh = false) => {
     if (isRefresh) setRefreshing(true);
@@ -45,6 +48,12 @@ function App() {
         setStartDate(dates[0]);
         setEndDate(dates[dates.length - 1]);
       }
+      
+      // Update sync timestamp
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+      const dateStr = now.toLocaleDateString([], { day: '2-digit', month: 'short', year: 'numeric' });
+      setSyncTime(`${dateStr} ${timeStr}`);
     } catch (err: any) {
       setError(err?.message || 'Failed to load dashboard data');
     } finally {
@@ -187,17 +196,28 @@ function App() {
       <main className="max-w-[1400px] mx-auto px-6 md:px-10 mt-6 space-y-6">
 
         {/* Data-source banner */}
-        <div className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm border ${
-          data.isFallback
-            ? 'bg-amber-50 border-amber-200 text-amber-800'
-            : 'bg-emerald-50 border-emerald-200 text-emerald-800'
-        }`}>
-          <Database className="w-4 h-4 flex-shrink-0" />
-          {data.isFallback
-            ? <span><strong>Offline Mode:</strong> Showing local cache — connect to sync live data.</span>
-            : <span><strong>Live Mode:</strong> Synced with Google Sheet · Period: <strong>{rangeLabel}</strong></span>
-          }
-        </div>
+        {showBanner && (
+          <div className={`flex items-center justify-between gap-3 px-4 py-3 rounded-xl text-sm border ${
+            data.isFallback
+              ? 'bg-amber-50 border-amber-200 text-amber-800'
+              : 'bg-emerald-50 border-emerald-200 text-emerald-800'
+          }`}>
+            <div className="flex items-center gap-3">
+              <Database className="w-4 h-4 flex-shrink-0" />
+              {data.isFallback
+                ? <span><strong>Offline Mode:</strong> Showing local cache — connect to sync live data.</span>
+                : <span><strong>Live Mode:</strong> Synced with Google Sheet · Period: <strong>{rangeLabel}</strong> · Last Synced: <strong>{syncTime}</strong></span>
+              }
+            </div>
+            <button
+              onClick={() => setShowBanner(false)}
+              className="text-slate-400 hover:text-slate-600 transition-colors p-1 rounded-lg hover:bg-slate-100/50"
+              title="Dismiss"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        )}
 
         {/* ── SECTION 1: KPI CARDS ── */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
