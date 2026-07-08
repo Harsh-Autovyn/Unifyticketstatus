@@ -18,7 +18,7 @@ import {
 function fmtDate(d: string) {
   if (!d) return '';
   const [y, m, day] = d.split('-');
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   return `${day} ${months[Number(m) - 1]} ${y}`;
 }
 
@@ -48,7 +48,7 @@ function App() {
         setStartDate(dates[0]);
         setEndDate(dates[dates.length - 1]);
       }
-      
+
       // Update sync timestamp
       const now = new Date();
       const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
@@ -103,16 +103,18 @@ function App() {
   });
 
   // ── Core KPIs ─────────────────────────────────────────────────────────────
-  const total      = filteredTickets.length;
-  const resolved   = filteredTickets.filter(t => t.Status === 'Resolved').length;
-  const pending    = filteredTickets.filter(t => t.Status === 'Pending').length;
+  const total = filteredTickets.length;
+  const resolved = filteredTickets.filter(t => t.Status === 'Resolved').length;
+  const pending = filteredTickets.filter(t => t.Status === 'Pending').length;
 
   // ── Ownership split ───────────────────────────────────────────────────────
-  const autovynTickets    = filteredTickets.filter(t => t.ownership === 'Autovyn');
+  const autovynTickets = filteredTickets.filter(t => t.ownership === 'Autovyn');
   const thirdPartyTickets = filteredTickets.filter(t => t.ownership === 'Third Party');
+  const serviceRequestTickets = filteredTickets.filter(t => t.ownership === 'Service Request');
 
-  const autovynResolved    = autovynTickets.filter(t => t.Status === 'Resolved').length;
+  const autovynResolved = autovynTickets.filter(t => t.Status === 'Resolved').length;
   const thirdPartyResolved = thirdPartyTickets.filter(t => t.Status === 'Resolved').length;
+  const serviceRequestResolved = serviceRequestTickets.filter(t => t.Status === 'Resolved').length;
 
   // ── Sub-category breakdown – AUTOVYN (total + resolved per sub) ───────────
   const autovynBreakdown: Record<string, { total: number; resolved: number }> = {};
@@ -132,13 +134,18 @@ function App() {
     if (t.Status === 'Resolved') thirdPartyBreakdown[sub].resolved += 1;
   });
 
-  const autovynPct = total > 0 ? ((autovynTickets.length / total) * 100).toFixed(0) : '0';
-  const tpPct      = total > 0 ? ((thirdPartyTickets.length / total) * 100).toFixed(0) : '0';
+  // ── Sub-category breakdown – SERVICE REQUEST (total + resolved per sub) ───
+  const serviceRequestBreakdown: Record<string, { total: number; resolved: number }> = {};
+  serviceRequestTickets.forEach(t => {
+    const sub = t['Sub Category'] || 'Other';
+    if (!serviceRequestBreakdown[sub]) serviceRequestBreakdown[sub] = { total: 0, resolved: 0 };
+    serviceRequestBreakdown[sub].total += 1;
+    if (t.Status === 'Resolved') serviceRequestBreakdown[sub].resolved += 1;
+  });
 
-  // ── Date range label ──────────────────────────────────────────────────────
-  const rangeLabel = startDate === endDate
-    ? fmtDate(startDate)
-    : `${fmtDate(startDate)} – ${fmtDate(endDate)}`;
+  const autovynPct = total > 0 ? ((autovynTickets.length / total) * 100).toFixed(0) : '0';
+  const tpPct = total > 0 ? ((thirdPartyTickets.length / total) * 100).toFixed(0) : '0';
+
 
   return (
     <div className="min-h-screen bg-slate-50 pb-16">
@@ -197,16 +204,15 @@ function App() {
 
         {/* Data-source banner */}
         {showBanner && (
-          <div className={`flex items-center justify-between gap-3 px-4 py-3 rounded-xl text-sm border ${
-            data.isFallback
-              ? 'bg-amber-50 border-amber-200 text-amber-800'
-              : 'bg-emerald-50 border-emerald-200 text-emerald-800'
-          }`}>
+          <div className={`flex items-center justify-between gap-3 px-4 py-3 rounded-xl text-sm border ${data.isFallback
+            ? 'bg-amber-50 border-amber-200 text-amber-800'
+            : 'bg-emerald-50 border-emerald-200 text-emerald-800'
+            }`}>
             <div className="flex items-center gap-3">
               <Database className="w-4 h-4 flex-shrink-0" />
               {data.isFallback
                 ? <span><strong>Offline Mode:</strong> Showing local cache — connect to sync live data.</span>
-                : <span><strong>Live Mode:</strong> Synced with Google Sheet · Period: <strong>{rangeLabel}</strong> · Last Synced: <strong>{syncTime}</strong></span>
+                : <span><strong>Live Mode:</strong> Last Synced: <strong>{syncTime}</strong></span>
               }
             </div>
             <button
@@ -220,7 +226,7 @@ function App() {
         )}
 
         {/* ── SECTION 1: KPI CARDS ── */}
-        <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <KpiCard
             label="Total Tickets"
             value={total}
@@ -243,10 +249,29 @@ function App() {
             icon={<Clock className="w-5 h-5" />}
           />
           <KpiCard
-            label="Autovyn Owned"
-            value={autovynTickets.length}
-            sub={`${thirdPartyTickets.length} via Third Party`}
+            label="Service Requests"
+            value={
+              <span className="flex items-baseline gap-1">
+                <span className="text-3xl font-extrabold text-violet-700">{serviceRequestTickets.length}</span>
+                <span className="text-xl font-light text-slate-300">/</span>
+                <span className="text-3xl font-extrabold text-emerald-500">{serviceRequestResolved}</span>
+              </span>
+            }
+            sub={`${serviceRequestTickets.length - serviceRequestResolved} pending SR`}
             color="violet"
+            icon={<Calendar className="w-5 h-5" />}
+          />
+          <KpiCard
+            label="Autovyn Owned"
+            value={
+              <span className="flex items-baseline gap-1">
+                <span className="text-3xl font-extrabold text-indigo-700">{autovynTickets.length}</span>
+                <span className="text-xl font-light text-slate-300">/</span>
+                <span className="text-3xl font-extrabold text-emerald-500">{autovynResolved}</span>
+              </span>
+            }
+            sub={`${thirdPartyTickets.length} TP dependency`}
+            color="indigo"
             icon={<ShieldCheck className="w-5 h-5" />}
           />
         </section>
@@ -256,7 +281,13 @@ function App() {
 
           {/* Donut / Status chart */}
           <div className="lg:col-span-1">
-            <StatusChart resolved={resolved} pending={pending} />
+            <StatusChart
+              resolved={resolved - serviceRequestResolved}
+              pending={pending - (serviceRequestTickets.length - serviceRequestResolved)}
+              serviceRequests={serviceRequestTickets.length}
+              totalTickets={total}
+              totalResolved={resolved}
+            />
           </div>
 
           {/* AUTOVYN OWNED */}
@@ -299,17 +330,21 @@ function App() {
 type AccentColor = 'indigo' | 'emerald' | 'rose' | 'violet' | 'amber';
 
 const colorMap: Record<AccentColor, { bg: string; text: string; badge: string; icon: string }> = {
-  indigo: { bg: 'bg-indigo-50',  text: 'text-indigo-700', badge: 'bg-indigo-100 text-indigo-700', icon: 'text-indigo-600' },
-  emerald:{ bg: 'bg-emerald-50', text: 'text-emerald-700', badge: 'bg-emerald-100 text-emerald-700', icon: 'text-emerald-600' },
-  rose:   { bg: 'bg-rose-50',    text: 'text-rose-700',    badge: 'bg-rose-100 text-rose-700',    icon: 'text-rose-600' },
-  violet: { bg: 'bg-violet-50',  text: 'text-violet-700',  badge: 'bg-violet-100 text-violet-700', icon: 'text-violet-600' },
-  amber:  { bg: 'bg-amber-50',   text: 'text-amber-700',   badge: 'bg-amber-100 text-amber-700',   icon: 'text-amber-600' },
+  indigo: { bg: 'bg-indigo-50', text: 'text-indigo-700', badge: 'bg-indigo-100 text-indigo-700', icon: 'text-indigo-600' },
+  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-700', badge: 'bg-emerald-100 text-emerald-700', icon: 'text-emerald-600' },
+  rose: { bg: 'bg-rose-50', text: 'text-rose-700', badge: 'bg-rose-100 text-rose-700', icon: 'text-rose-600' },
+  violet: { bg: 'bg-violet-50', text: 'text-violet-700', badge: 'bg-violet-100 text-violet-700', icon: 'text-violet-600' },
+  amber: { bg: 'bg-amber-50', text: 'text-amber-700', badge: 'bg-amber-100 text-amber-700', icon: 'text-amber-600' },
 };
 
 function KpiCard({ label, value, sub, color, icon }: {
-  label: string; value: number; sub: string; color: AccentColor; icon: React.ReactNode
+  label: string; value: React.ReactNode; sub: string; color: AccentColor; icon: React.ReactNode
 }) {
   const c = colorMap[color];
+  const renderedValue = (typeof value === 'number' || typeof value === 'string')
+    ? <p className={`text-4xl font-extrabold ${c.text}`}>{value.toLocaleString()}</p>
+    : value;
+
   return (
     <div className="glass-card rounded-2xl p-5 flex flex-col gap-3">
       <div className="flex items-center justify-between">
@@ -317,7 +352,7 @@ function KpiCard({ label, value, sub, color, icon }: {
         <div className={`p-2 rounded-xl ${c.bg} ${c.icon}`}>{icon}</div>
       </div>
       <div>
-        <p className={`text-4xl font-extrabold ${c.text} leading-none`}>{value.toLocaleString()}</p>
+        <div className="leading-none">{renderedValue}</div>
         <p className="text-xs text-slate-400 mt-1.5">{sub}</p>
       </div>
     </div>
@@ -395,8 +430,8 @@ function OwnershipPanel({
         )}
         {entries.map(([sub, counts]) => {
           const subPending = counts.total - counts.resolved;
-          const barTotalPct  = Math.round((counts.total / maxCount) * 100);
-          const barResPct    = Math.round((counts.resolved / maxCount) * 100);
+          const barTotalPct = Math.round((counts.total / maxCount) * 100);
+          const barResPct = Math.round((counts.resolved / maxCount) * 100);
           return (
             <div key={sub}>
               <div className="flex items-center justify-between mb-1">
@@ -409,9 +444,12 @@ function OwnershipPanel({
                   <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600">{counts.resolved}</span>
                   {/* pending indicator */}
                   {subPending > 0 && (
-                    <span className="text-xs font-bold px-1.5 py-0.5 rounded-full bg-rose-50 text-rose-500 border border-rose-100">
-                      {subPending}⚠
-                    </span>
+                    <>
+                      <span className="text-slate-200 text-xs">/</span>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-500 border border-rose-100">
+                        {subPending}
+                      </span>
+                    </>
                   )}
                 </div>
               </div>

@@ -7,7 +7,7 @@ export interface Ticket {
   Category: string;
   'Sub Category': string;
   Status: 'Pending' | 'Resolved' | string;
-  ownership?: 'Autovyn' | 'Third Party';
+  ownership?: 'Autovyn' | 'Third Party' | 'Service Request';
 }
 
 export interface CategoryMaster {

@@ -106,8 +106,12 @@ function parseCSVLine(line: string): string[] {
  * Classification is by EXACT match on trimmed, lower-cased Sub Category.
  * Unknown subcategories default to Autovyn (internal team handles it).
  */
-export function getTicketOwnership(subCategory: string): 'Autovyn' | 'Third Party' {
+export function getTicketOwnership(subCategory: string): 'Autovyn' | 'Third Party' | 'Service Request' {
   const sub = (subCategory || '').trim().toLowerCase();
+
+  if (sub === 'service request') {
+    return 'Service Request';
+  }
 
   // Explicit Third Party sub-categories (exact match)
   const THIRD_PARTY_SUBS = new Set([

@@ -49,6 +49,9 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
       if (sub.toLowerCase().includes('dps')) return { label: 'DPS Related', bg: 'bg-orange-100 text-orange-800 border-orange-200' };
       return { label: sub || 'Third Party', bg: 'bg-purple-100 text-purple-800 border-purple-200' };
     }
+    if (ticket.ownership === 'Service Request') {
+      return { label: 'Service Request', bg: 'bg-violet-100 text-violet-800 border-violet-200' };
+    }
     return { label: 'Autovyn', bg: 'bg-indigo-100 text-indigo-800 border-indigo-200' };
   };
 
