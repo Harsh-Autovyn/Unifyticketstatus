@@ -280,7 +280,15 @@ function App() {
           <KpiCard
             label="Service Requests"
             value={serviceRequestTickets.length}
-            sub={`${serviceRequestTickets.length - serviceRequestResolved} pending SR`}
+            sub={
+              (serviceRequestTickets.length - serviceRequestResolved) > 0 ? (
+                <span className="text-rose-600 font-semibold">
+                  {serviceRequestTickets.length - serviceRequestResolved} pending SR
+                </span>
+              ) : (
+                "0 pending SR"
+              )
+            }
             color="violet"
             icon={<Calendar className="w-5 h-5" />}
           />
@@ -289,7 +297,7 @@ function App() {
         {/* ── SECTION 1B: PRIMARY CATEGORY BREAKDOWN ── */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard
-            label="AutoVyn Owned"
+            label="Application Issues"
             value={dealerCrmTickets.length}
             sub="Dealer CRM Related"
             color="indigo"
@@ -378,7 +386,7 @@ const colorMap: Record<AccentColor, { bg: string; text: string; badge: string; i
 };
 
 function KpiCard({ label, value, sub, color, icon }: {
-  label: string; value: React.ReactNode; sub: string; color: AccentColor; icon: React.ReactNode
+  label: string; value: React.ReactNode; sub: React.ReactNode; color: AccentColor; icon: React.ReactNode
 }) {
   const c = colorMap[color];
   const renderedValue = (typeof value === 'number' || typeof value === 'string')
