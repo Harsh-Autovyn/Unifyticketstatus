@@ -335,8 +335,8 @@ function App() {
           {/* AUTOVYN OWNED */}
           <div className="lg:col-span-1">
             <OwnershipPanel
-              title="AUTOVYN OWNED"
-              subtitle="Internal Resolution"
+              title="TOP 5 CATEGORIES"
+              subtitle="RANKED BY TICKET COUNT"
               total={autovynTickets.length}
               resolved={autovynResolved}
               breakdown={autovynBreakdown}
@@ -420,43 +420,23 @@ function OwnershipPanel({
   return (
     <div className="glass-panel rounded-2xl p-5 h-full flex flex-col">
       {/* Header */}
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-start justify-between mb-3">
         <div>
-          <h3 className={`text-sm font-extrabold tracking-tight ${c.text}`}>{title}</h3>
-          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-0.5">{subtitle}</p>
+          <h3 className={`text-xl font-extrabold tracking-tight ${c.text} leading-none`}>{title}</h3>
+          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-1.5">{subtitle || <span className="opacity-0 select-none">&nbsp;</span>}</p>
         </div>
-        {/* Total count pill */}
-        <div className="text-right">
-          <div className="flex items-baseline gap-1 justify-end">
-            <span className={`text-2xl font-extrabold ${c.text}`}>{total}</span>
-          </div>
-          <div className="flex items-center gap-2 justify-end mt-0.5">
-            {pending > 0 && (
-              <span className="text-[10px] font-bold text-rose-500 bg-rose-50 border border-rose-100 px-1.5 py-0.5 rounded-full">
-                {pending} pending
-              </span>
-            )}
-          </div>
+        {/* Total count and pending badge */}
+        <div className="flex items-center gap-2 flex-shrink-0 mt-0.5">
+          <span className={`text-2xl font-extrabold ${c.text} leading-none`}>{total}</span>
+          {pending > 0 && (
+            <span className="text-[10px] font-bold text-rose-500 bg-rose-50 border border-rose-100 px-2 py-0.5 rounded-full whitespace-nowrap leading-none">
+              {pending} pending
+            </span>
+          )}
         </div>
       </div>
 
-      {/* Legend */}
-      <div className="flex items-center gap-4 mb-3 text-[10px] text-slate-400 font-semibold">
-        <span className={`flex items-center gap-1 ${c.text}`}>
-          <span className={`w-2 h-2 rounded-full inline-block`} style={{ background: accentColor === 'indigo' ? '#6366f1' : '#f59e0b' }} />
-          Total
-        </span>
-        <span className="flex items-center gap-1 text-emerald-500">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" />
-          Resolved
-        </span>
-        {pending > 0 && (
-          <span className="flex items-center gap-1 text-rose-400">
-            <span className="w-2 h-2 rounded-full bg-rose-400 inline-block" />
-            Pending
-          </span>
-        )}
-      </div>
+
 
       {/* Divider */}
       <div className="h-px mb-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }} />
