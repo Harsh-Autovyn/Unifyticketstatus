@@ -125,21 +125,14 @@ function App() {
   const thirdPartyTickets = filteredTickets.filter(t => t.ownership === 'Third Party');
   const serviceRequestTickets = filteredTickets.filter(t => t.ownership === 'Service Request');
 
+  const autovynResolved = autovynTickets.filter(t => t.Status === 'Resolved').length;
   const thirdPartyResolved = thirdPartyTickets.filter(t => t.Status === 'Resolved').length;
   const serviceRequestResolved = serviceRequestTickets.filter(t => t.Status === 'Resolved').length;
 
   // ── Custom category groups ────────────────────────────────────────────────
   const dealerCrmTickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'dealer crm related');
-  const dealerCrmResolved = dealerCrmTickets.filter(t => t.Status === 'Resolved').length;
-
   const revertL1Tickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'revert back to l1');
-  const revertL1Resolved = revertL1Tickets.filter(t => t.Status === 'Resolved').length;
-
   const userGuidanceTickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'user guidance');
-  const userGuidanceResolved = userGuidanceTickets.filter(t => t.Status === 'Resolved').length;
-
-  const commonMicroservicesTickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'common microservice');
-  const commonMicroservicesResolved = commonMicroservicesTickets.filter(t => t.Status === 'Resolved').length;
 
   // ── Sub-category breakdown – AUTOVYN (total + resolved per sub) ───────────
   const autovynBreakdown: Record<string, { total: number; resolved: number }> = {};
@@ -339,18 +332,15 @@ function App() {
             />
           </div>
 
-          {/* TOP 5 CATEGORIES */}
+          {/* AUTOVYN OWNED */}
           <div className="lg:col-span-1">
-            <CategoryGroupsPanel
-              title="TOP 5 CATEGORY GROUPS"
-              subtitle="Distribution & Closure"
-              groups={[
-                { name: "User Guidance & Training", total: userGuidanceTickets.length, resolved: userGuidanceResolved, color: "emerald" },
-                { name: "Third Party", total: thirdPartyTickets.length, resolved: thirdPartyResolved, color: "amber" },
-                { name: "Common Microservices", total: commonMicroservicesTickets.length, resolved: commonMicroservicesResolved, color: "rose" },
-                { name: "L1 Dependent (Cognizent)", total: revertL1Tickets.length, resolved: revertL1Resolved, color: "violet" },
-                { name: "AutoVyn Owned", total: dealerCrmTickets.length, resolved: dealerCrmResolved, color: "indigo" }
-              ]}
+            <OwnershipPanel
+              title="AUTOVYN OWNED"
+              subtitle="Internal Resolution"
+              total={autovynTickets.length}
+              resolved={autovynResolved}
+              breakdown={autovynBreakdown}
+              accentColor="indigo"
             />
           </div>
 
@@ -409,121 +399,7 @@ function KpiCard({ label, value, sub, color, icon }: {
   );
 }
 
-// ── CATEGORY GROUPS PANEL ───────────────────────────────────────────────────
-interface CategoryGroup {
-  name: string;
-  total: number;
-  resolved: number;
-  color: AccentColor;
-}
 
-function CategoryGroupsPanel({
-  title,
-  subtitle,
-  groups,
-}: {
-  title: string;
-  subtitle: string;
-  groups: CategoryGroup[];
-}) {
-  const sortedGroups = [...groups].sort((a, b) => b.total - a.total);
-  const maxCount = sortedGroups.length > 0 ? sortedGroups[0].total : 1;
-  const totalTickets = groups.reduce((acc, g) => acc + g.total, 0);
-  const totalResolved = groups.reduce((acc, g) => acc + g.resolved, 0);
-  const pending = totalTickets - totalResolved;
-
-  return (
-    <div className="glass-panel rounded-2xl p-5 h-full flex flex-col">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-3">
-        <div>
-          <h3 className="text-sm font-extrabold tracking-tight text-slate-900">{title}</h3>
-          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-0.5">{subtitle}</p>
-        </div>
-      </div>
-
-      {/* Legend */}
-      <div className="flex items-center gap-4 mb-3 text-[10px] text-slate-400 font-semibold">
-        <span className="flex items-center gap-1 text-slate-500">
-          <span className="w-2 h-2 rounded-full bg-slate-400 inline-block" />
-          Total
-        </span>
-        <span className="flex items-center gap-1 text-emerald-500">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" />
-          Resolved
-        </span>
-        {pending > 0 && (
-          <span className="flex items-center gap-1 text-rose-400">
-            <span className="w-2 h-2 rounded-full bg-rose-400 inline-block" />
-            Pending
-          </span>
-        )}
-      </div>
-
-      {/* Divider */}
-      <div className="h-px mb-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }} />
-
-      {/* Breakdown list */}
-      <div className="flex flex-col gap-2.5 flex-1">
-        {sortedGroups.map((group) => {
-          const subPending = group.total - group.resolved;
-          const barTotalPct = Math.round((group.total / maxCount) * 100);
-          const barResPct = Math.round((group.resolved / maxCount) * 100);
-          return (
-            <div key={group.name}>
-              <div className="flex items-center justify-between mb-1">
-                <span className="text-xs text-slate-700 font-medium truncate max-w-[180px]" title={group.name}>
-                  {group.name}
-                </span>
-                <div className="flex items-center gap-1.5 flex-shrink-0">
-                  {/* total badge */}
-                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${subPending > 0 ? 'bg-indigo-100 text-indigo-700' : 'bg-emerald-50 text-emerald-600'}`}>{group.total}</span>
-                  {/* pending indicator */}
-                  {subPending > 0 && (
-                    <>
-                      <span className="text-slate-200 text-xs">/</span>
-                      <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-500 border border-rose-100">
-                        {subPending} pending
-                      </span>
-                    </>
-                  )}
-                </div>
-              </div>
-              {/* Stacked bar: total (faint) + resolved (solid) */}
-              <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden relative">
-                {/* total bar (faint) */}
-                <div
-                  className="h-full rounded-full absolute top-0 left-0"
-                  style={{
-                    width: `${barTotalPct}%`,
-                    background:
-                      group.color === 'indigo'
-                        ? '#c7d2fe'
-                        : group.color === 'amber'
-                        ? '#fde68a'
-                        : group.color === 'emerald'
-                        ? '#a7f3d0'
-                        : group.color === 'violet'
-                        ? '#ddd6fe'
-                        : '#fca5a5',
-                  }}
-                />
-                {/* resolved bar (solid) */}
-                <div
-                  className="h-full rounded-full absolute top-0 left-0"
-                  style={{
-                    width: `${barResPct}%`,
-                    background: '#34d399',
-                  }}
-                />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 // ── OWNERSHIP PANEL ───────────────────────────────────────────────────────────
 function OwnershipPanel({
