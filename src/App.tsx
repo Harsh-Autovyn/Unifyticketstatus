@@ -287,13 +287,7 @@ function App() {
           />
           <KpiCard
             label="Service Requests"
-            value={
-              <span className="flex items-baseline gap-1">
-                <span className="text-3xl font-extrabold text-violet-700">{serviceRequestTickets.length}</span>
-                <span className="text-xl font-light text-slate-300">/</span>
-                <span className="text-3xl font-extrabold text-emerald-500">{serviceRequestResolved}</span>
-              </span>
-            }
+            value={serviceRequestTickets.length}
             sub={`${serviceRequestTickets.length - serviceRequestResolved} pending SR`}
             color="violet"
             icon={<Calendar className="w-5 h-5" />}
@@ -304,52 +298,28 @@ function App() {
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard
             label="AutoVyn Owned"
-            value={
-              <span className="flex items-baseline gap-1">
-                <span className="text-3xl font-extrabold text-indigo-700">{dealerCrmTickets.length}</span>
-                <span className="text-xl font-light text-slate-300">/</span>
-                <span className="text-3xl font-extrabold text-emerald-500">{dealerCrmResolved}</span>
-              </span>
-            }
+            value={dealerCrmTickets.length}
             sub="Dealer CRM Related"
             color="indigo"
             icon={<ShieldCheck className="w-5 h-5" />}
           />
           <KpiCard
             label="Third Party"
-            value={
-              <span className="flex items-baseline gap-1">
-                <span className="text-3xl font-extrabold text-violet-700">{thirdPartyTickets.length}</span>
-                <span className="text-xl font-light text-slate-300">/</span>
-                <span className="text-3xl font-extrabold text-emerald-500">{thirdPartyResolved}</span>
-              </span>
-            }
+            value={thirdPartyTickets.length}
             sub="External Dependency"
             color="violet"
             icon={<AlertTriangle className="w-5 h-5" />}
           />
           <KpiCard
             label="L1 Dependent (Cognizent)"
-            value={
-              <span className="flex items-baseline gap-1">
-                <span className="text-3xl font-extrabold text-indigo-700">{revertL1Tickets.length}</span>
-                <span className="text-xl font-light text-slate-300">/</span>
-                <span className="text-3xl font-extrabold text-emerald-500">{revertL1Resolved}</span>
-              </span>
-            }
+            value={revertL1Tickets.length}
             sub="Revert back to L1"
             color="indigo"
             icon={<RefreshCw className="w-5 h-5" />}
           />
           <KpiCard
             label="User Guidance & Training"
-            value={
-              <span className="flex items-baseline gap-1">
-                <span className="text-3xl font-extrabold text-violet-700">{userGuidanceTickets.length}</span>
-                <span className="text-xl font-light text-slate-300">/</span>
-                <span className="text-3xl font-extrabold text-emerald-500">{userGuidanceResolved}</span>
-              </span>
-            }
+            value={userGuidanceTickets.length}
             sub="User Guidance"
             color="violet"
             icon={<CheckCircle2 className="w-5 h-5" />}
@@ -510,17 +480,12 @@ function CategoryGroupsPanel({
                 <div className="flex items-center gap-1.5 flex-shrink-0">
                   {/* total badge */}
                   <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${subPending > 0 ? 'bg-indigo-100 text-indigo-700' : 'bg-emerald-50 text-emerald-600'}`}>{group.total}</span>
-                  <span className="text-slate-200 text-xs">/</span>
-                  {/* resolved badge */}
-                  <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600">
-                    {group.resolved}
-                  </span>
                   {/* pending indicator */}
                   {subPending > 0 && (
                     <>
                       <span className="text-slate-200 text-xs">/</span>
                       <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-500 border border-rose-100">
-                        {subPending}
+                        {subPending} pending
                       </span>
                     </>
                   )}
@@ -642,15 +607,12 @@ function OwnershipPanel({
                 <div className="flex items-center gap-1.5 flex-shrink-0">
                   {/* total badge */}
                   <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${subPending > 0 ? c.badge : 'bg-emerald-50 text-emerald-600'}`}>{counts.total}</span>
-                  <span className="text-slate-200 text-xs">/</span>
-                  {/* resolved badge */}
-                  <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600">{counts.resolved}</span>
                   {/* pending indicator */}
                   {subPending > 0 && (
                     <>
                       <span className="text-slate-200 text-xs">/</span>
                       <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-500 border border-rose-100">
-                        {subPending}
+                        {subPending} pending
                       </span>
                     </>
                   )}
