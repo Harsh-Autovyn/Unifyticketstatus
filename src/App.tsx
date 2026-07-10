@@ -125,9 +125,21 @@ function App() {
   const thirdPartyTickets = filteredTickets.filter(t => t.ownership === 'Third Party');
   const serviceRequestTickets = filteredTickets.filter(t => t.ownership === 'Service Request');
 
-  const autovynResolved = autovynTickets.filter(t => t.Status === 'Resolved').length;
   const thirdPartyResolved = thirdPartyTickets.filter(t => t.Status === 'Resolved').length;
   const serviceRequestResolved = serviceRequestTickets.filter(t => t.Status === 'Resolved').length;
+
+  // ── Custom category groups ────────────────────────────────────────────────
+  const dealerCrmTickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'dealer crm related');
+  const dealerCrmResolved = dealerCrmTickets.filter(t => t.Status === 'Resolved').length;
+
+  const revertL1Tickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'revert back to l1');
+  const revertL1Resolved = revertL1Tickets.filter(t => t.Status === 'Resolved').length;
+
+  const userGuidanceTickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'user guidance');
+  const userGuidanceResolved = userGuidanceTickets.filter(t => t.Status === 'Resolved').length;
+
+  const commonMicroservicesTickets = filteredTickets.filter(t => (t['Sub Category'] || '').trim().toLowerCase() === 'common microservice');
+  const commonMicroservicesResolved = commonMicroservicesTickets.filter(t => t.Status === 'Resolved').length;
 
   // ── Sub-category breakdown – AUTOVYN (total + resolved per sub) ───────────
   const autovynBreakdown: Record<string, { total: number; resolved: number }> = {};
@@ -156,7 +168,6 @@ function App() {
     if (t.Status === 'Resolved') serviceRequestBreakdown[sub].resolved += 1;
   });
 
-  const autovynPct = total > 0 ? ((autovynTickets.length / total) * 100).toFixed(0) : '0';
   const tpPct = total > 0 ? ((thirdPartyTickets.length / total) * 100).toFixed(0) : '0';
 
 
@@ -165,7 +176,7 @@ function App() {
 
       {/* ── HEADER ── */}
       <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="w-full px-6 md:px-10 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
           {/* Brand */}
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-600/30">
@@ -226,7 +237,7 @@ function App() {
       </header>
 
       {/* ── MAIN ── */}
-      <main className="max-w-[1400px] mx-auto px-6 md:px-10 mt-6 space-y-6">
+      <main className="w-full px-6 md:px-10 mt-6 space-y-6">
 
         {/* Data-source banner */}
         {showBanner && (
@@ -252,7 +263,7 @@ function App() {
         )}
 
         {/* ── SECTION 1: KPI CARDS ── */}
-        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           <KpiCard
             label="Total Tickets"
             value={total}
@@ -287,18 +298,61 @@ function App() {
             color="violet"
             icon={<Calendar className="w-5 h-5" />}
           />
+        </section>
+
+        {/* ── SECTION 1B: PRIMARY CATEGORY BREAKDOWN ── */}
+        <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard
-            label="Autovyn Owned"
+            label="AutoVyn Owned"
             value={
               <span className="flex items-baseline gap-1">
-                <span className="text-3xl font-extrabold text-indigo-700">{autovynTickets.length}</span>
+                <span className="text-3xl font-extrabold text-indigo-700">{dealerCrmTickets.length}</span>
                 <span className="text-xl font-light text-slate-300">/</span>
-                <span className="text-3xl font-extrabold text-emerald-500">{autovynResolved}</span>
+                <span className="text-3xl font-extrabold text-emerald-500">{dealerCrmResolved}</span>
               </span>
             }
-            sub={`${thirdPartyTickets.length} TP dependency`}
+            sub="Dealer CRM Related"
             color="indigo"
             icon={<ShieldCheck className="w-5 h-5" />}
+          />
+          <KpiCard
+            label="Third Party"
+            value={
+              <span className="flex items-baseline gap-1">
+                <span className="text-3xl font-extrabold text-violet-700">{thirdPartyTickets.length}</span>
+                <span className="text-xl font-light text-slate-300">/</span>
+                <span className="text-3xl font-extrabold text-emerald-500">{thirdPartyResolved}</span>
+              </span>
+            }
+            sub="External Dependency"
+            color="violet"
+            icon={<AlertTriangle className="w-5 h-5" />}
+          />
+          <KpiCard
+            label="L1 Dependent (Cognizent)"
+            value={
+              <span className="flex items-baseline gap-1">
+                <span className="text-3xl font-extrabold text-indigo-700">{revertL1Tickets.length}</span>
+                <span className="text-xl font-light text-slate-300">/</span>
+                <span className="text-3xl font-extrabold text-emerald-500">{revertL1Resolved}</span>
+              </span>
+            }
+            sub="Revert back to L1"
+            color="indigo"
+            icon={<RefreshCw className="w-5 h-5" />}
+          />
+          <KpiCard
+            label="User Guidance & Training"
+            value={
+              <span className="flex items-baseline gap-1">
+                <span className="text-3xl font-extrabold text-violet-700">{userGuidanceTickets.length}</span>
+                <span className="text-xl font-light text-slate-300">/</span>
+                <span className="text-3xl font-extrabold text-emerald-500">{userGuidanceResolved}</span>
+              </span>
+            }
+            sub="User Guidance"
+            color="violet"
+            icon={<CheckCircle2 className="w-5 h-5" />}
           />
         </section>
 
@@ -316,16 +370,18 @@ function App() {
             />
           </div>
 
-          {/* AUTOVYN OWNED */}
+          {/* TOP 5 CATEGORIES */}
           <div className="lg:col-span-1">
-            <OwnershipPanel
-              title="AUTOVYN OWNED"
-              subtitle="Internal Resolution"
-              total={autovynTickets.length}
-              resolved={autovynResolved}
-              totalPct={autovynPct}
-              breakdown={autovynBreakdown}
-              accentColor="indigo"
+            <CategoryGroupsPanel
+              title="TOP 5 CATEGORY GROUPS"
+              subtitle="Distribution & Closure"
+              groups={[
+                { name: "User Guidance & Training", total: userGuidanceTickets.length, resolved: userGuidanceResolved, color: "emerald" },
+                { name: "Third Party", total: thirdPartyTickets.length, resolved: thirdPartyResolved, color: "amber" },
+                { name: "Common Microservices", total: commonMicroservicesTickets.length, resolved: commonMicroservicesResolved, color: "rose" },
+                { name: "L1 Dependent (Cognizent)", total: revertL1Tickets.length, resolved: revertL1Resolved, color: "violet" },
+                { name: "AutoVyn Owned", total: dealerCrmTickets.length, resolved: dealerCrmResolved, color: "indigo" }
+              ]}
             />
           </div>
 
@@ -380,6 +436,127 @@ function KpiCard({ label, value, sub, color, icon }: {
       <div>
         <div className="leading-none">{renderedValue}</div>
         <p className="text-xs text-slate-400 mt-1.5">{sub}</p>
+      </div>
+    </div>
+  );
+}
+
+// ── CATEGORY GROUPS PANEL ───────────────────────────────────────────────────
+interface CategoryGroup {
+  name: string;
+  total: number;
+  resolved: number;
+  color: AccentColor;
+}
+
+function CategoryGroupsPanel({
+  title,
+  subtitle,
+  groups,
+}: {
+  title: string;
+  subtitle: string;
+  groups: CategoryGroup[];
+}) {
+  const sortedGroups = [...groups].sort((a, b) => b.total - a.total);
+  const maxCount = sortedGroups.length > 0 ? sortedGroups[0].total : 1;
+  const totalTickets = groups.reduce((acc, g) => acc + g.total, 0);
+  const totalResolved = groups.reduce((acc, g) => acc + g.resolved, 0);
+  const pending = totalTickets - totalResolved;
+
+  return (
+    <div className="glass-panel rounded-2xl p-5 h-full flex flex-col">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-3">
+        <div>
+          <h3 className="text-sm font-extrabold tracking-tight text-slate-900">{title}</h3>
+          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-0.5">{subtitle}</p>
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="flex items-center gap-4 mb-3 text-[10px] text-slate-400 font-semibold">
+        <span className="flex items-center gap-1 text-slate-500">
+          <span className="w-2 h-2 rounded-full bg-slate-400 inline-block" />
+          Total
+        </span>
+        <span className="flex items-center gap-1 text-emerald-500">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" />
+          Resolved
+        </span>
+        {pending > 0 && (
+          <span className="flex items-center gap-1 text-rose-400">
+            <span className="w-2 h-2 rounded-full bg-rose-400 inline-block" />
+            Pending
+          </span>
+        )}
+      </div>
+
+      {/* Divider */}
+      <div className="h-px mb-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }} />
+
+      {/* Breakdown list */}
+      <div className="flex flex-col gap-2.5 flex-1">
+        {sortedGroups.map((group) => {
+          const subPending = group.total - group.resolved;
+          const barTotalPct = Math.round((group.total / maxCount) * 100);
+          const barResPct = Math.round((group.resolved / maxCount) * 100);
+          return (
+            <div key={group.name}>
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs text-slate-700 font-medium truncate max-w-[180px]" title={group.name}>
+                  {group.name}
+                </span>
+                <div className="flex items-center gap-1.5 flex-shrink-0">
+                  {/* total badge */}
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${subPending > 0 ? 'bg-indigo-100 text-indigo-700' : 'bg-emerald-50 text-emerald-600'}`}>{group.total}</span>
+                  <span className="text-slate-200 text-xs">/</span>
+                  {/* resolved badge */}
+                  <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600">
+                    {group.resolved}
+                  </span>
+                  {/* pending indicator */}
+                  {subPending > 0 && (
+                    <>
+                      <span className="text-slate-200 text-xs">/</span>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-500 border border-rose-100">
+                        {subPending}
+                      </span>
+                    </>
+                  )}
+                </div>
+              </div>
+              {/* Stacked bar: total (faint) + resolved (solid) */}
+              <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden relative">
+                {/* total bar (faint) */}
+                <div
+                  className="h-full rounded-full absolute top-0 left-0"
+                  style={{
+                    width: `${barTotalPct}%`,
+                    background:
+                      group.color === 'indigo'
+                        ? '#c7d2fe'
+                        : group.color === 'amber'
+                        ? '#fde68a'
+                        : group.color === 'emerald'
+                        ? '#a7f3d0'
+                        : group.color === 'violet'
+                        ? '#ddd6fe'
+                        : '#fca5a5',
+                  }}
+                />
+                {/* resolved bar (solid) */}
+                <div
+                  className="h-full rounded-full absolute top-0 left-0"
+                  style={{
+                    width: `${barResPct}%`,
+                    background: '#34d399',
+                  }}
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -464,7 +641,7 @@ function OwnershipPanel({
                 <span className="text-xs text-slate-700 font-medium truncate max-w-[160px]" title={sub}>{sub}</span>
                 <div className="flex items-center gap-1.5 flex-shrink-0">
                   {/* total badge */}
-                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${c.badge}`}>{counts.total}</span>
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${subPending > 0 ? c.badge : 'bg-emerald-50 text-emerald-600'}`}>{counts.total}</span>
                   <span className="text-slate-200 text-xs">/</span>
                   {/* resolved badge */}
                   <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600">{counts.resolved}</span>
