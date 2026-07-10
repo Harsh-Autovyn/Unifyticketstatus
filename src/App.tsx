@@ -168,7 +168,6 @@ function App() {
     if (t.Status === 'Resolved') serviceRequestBreakdown[sub].resolved += 1;
   });
 
-  const tpPct = total > 0 ? ((thirdPartyTickets.length / total) * 100).toFixed(0) : '0';
 
 
   return (
@@ -362,7 +361,6 @@ function App() {
               subtitle="External Resolution"
               total={thirdPartyTickets.length}
               resolved={thirdPartyResolved}
-              totalPct={tpPct}
               breakdown={thirdPartyBreakdown}
               accentColor="amber"
             />
@@ -529,13 +527,12 @@ function CategoryGroupsPanel({
 
 // ── OWNERSHIP PANEL ───────────────────────────────────────────────────────────
 function OwnershipPanel({
-  title, subtitle, total, resolved, totalPct, breakdown, accentColor
+  title, subtitle, total, resolved, breakdown, accentColor
 }: {
   title: string;
   subtitle: string;
   total: number;
   resolved: number;
-  totalPct: string;
   breakdown: Record<string, { total: number; resolved: number }>;
   accentColor: AccentColor;
 }) {
@@ -552,15 +549,12 @@ function OwnershipPanel({
           <h3 className={`text-sm font-extrabold tracking-tight ${c.text}`}>{title}</h3>
           <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-0.5">{subtitle}</p>
         </div>
-        {/* Total / Resolved pill */}
+        {/* Total count pill */}
         <div className="text-right">
           <div className="flex items-baseline gap-1 justify-end">
             <span className={`text-2xl font-extrabold ${c.text}`}>{total}</span>
-            <span className="text-slate-300 text-lg font-light">/</span>
-            <span className="text-2xl font-extrabold text-emerald-500">{resolved}</span>
           </div>
           <div className="flex items-center gap-2 justify-end mt-0.5">
-            <span className="text-[10px] text-slate-400 font-semibold">{totalPct}% of total</span>
             {pending > 0 && (
               <span className="text-[10px] font-bold text-rose-500 bg-rose-50 border border-rose-100 px-1.5 py-0.5 rounded-full">
                 {pending} pending
