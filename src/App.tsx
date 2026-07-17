@@ -161,7 +161,7 @@ export default function App() {
   const topAppIssues = getTopCategories(appIssueTickets, t => {
     const code = (t['Resolution Code'] || '').trim();
     return code ? code : 'Unspecified';
-  });
+  }, 20);
 
   // Donut chart logic
   const donutResolvedCore = nonSrResolved;
@@ -381,7 +381,7 @@ export default function App() {
             />
             <CategoryListCard
               title="Application Issues"
-              subtitle="Top 5 Breakdown by Resolution Code"
+              subtitle="Breakdown by Resolution Code"
               total={appIssueTickets.length}
               data={topAppIssues}
               colorClass="bg-gradient-to-r from-blue-50/50 to-blue-100/30 border-blue-100/50"
