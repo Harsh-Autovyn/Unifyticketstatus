@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getDashboardData, type DashboardData } from './data/ticketService';
-import type { Ticket } from './types/ticket';
 import { TicketList } from './components/TicketList';
 import { Login } from './components/Login';
 import {
-  Calendar, RefreshCw, AlertCircle, LayoutDashboard, Mail, CheckCircle2, Clock, CalendarHeart, Shield, AlertTriangle, RefreshCcw, GraduationCap
+  Calendar, RefreshCw, AlertCircle, LayoutDashboard, Mail, CheckCircle2, Clock, Shield, AlertTriangle, RefreshCcw, GraduationCap
 } from 'lucide-react';
 
 function fmtDate(d: string) {
