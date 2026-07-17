@@ -345,9 +345,9 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex-1 flex items-center justify-center relative my-1">
+            <div className="flex-1 flex items-center justify-center relative my-4">
               <div
-                className="w-32 h-32 rounded-full flex items-center justify-center relative shadow-[inset_0_4px_15px_rgba(0,0,0,0.1)] transition-transform duration-700 hover:scale-[1.02]"
+                className="w-48 h-48 rounded-full flex items-center justify-center relative shadow-[inset_0_4px_15px_rgba(0,0,0,0.1)] transition-transform duration-700 hover:scale-[1.02]"
                 style={{
                   background: `conic-gradient(
                     #10b981 0% ${pctResolvedCore}%, 
@@ -356,9 +356,9 @@ export default function App() {
                   )`
                 }}
               >
-                <div className="w-24 h-24 bg-white rounded-full flex flex-col items-center justify-center absolute shadow-[0_0_25px_rgba(0,0,0,0.08)]">
-                  <span className="text-3xl font-black text-slate-800 tracking-tight">{total}</span>
-                  <span className="text-[8px] font-extrabold text-slate-400 uppercase tracking-widest mt-1">Total Tickets</span>
+                <div className="w-36 h-36 bg-white rounded-full flex flex-col items-center justify-center absolute shadow-[0_0_25px_rgba(0,0,0,0.08)]">
+                  <span className="text-5xl font-black text-slate-800 tracking-tight">{total}</span>
+                  <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mt-1">Total Tickets</span>
                 </div>
               </div>
             </div>
