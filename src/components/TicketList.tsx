@@ -43,20 +43,20 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
   const getTeamLabelAndColor = (ticket: Ticket) => {
     if (ticket.ownership === 'Third Party') {
       const sub = (ticket['Sub Category'] || '').trim();
-      if (sub.toLowerCase().includes('common')) return { label: 'Common', bg: 'bg-amber-100 text-amber-800 border-amber-200' };
-      if (sub.toLowerCase().includes('tcl')) return { label: 'TCL', bg: 'bg-cyan-100 text-cyan-800 border-cyan-200' };
-      if (sub.toLowerCase().includes('clear quote')) return { label: 'Clear Quote', bg: 'bg-pink-100 text-pink-800 border-pink-200' };
-      if (sub.toLowerCase().includes('dps')) return { label: 'DPS Related', bg: 'bg-orange-100 text-orange-800 border-orange-200' };
-      return { label: sub || 'Third Party', bg: 'bg-purple-100 text-purple-800 border-purple-200' };
+      if (sub.toLowerCase().includes('common')) return { label: 'Common', bg: 'bg-amber-50 text-amber-700 border-amber-200/50' };
+      if (sub.toLowerCase().includes('tcl')) return { label: 'TCL', bg: 'bg-cyan-50 text-cyan-700 border-cyan-200/50' };
+      if (sub.toLowerCase().includes('clear quote')) return { label: 'Clear Quote', bg: 'bg-pink-50 text-pink-700 border-pink-200/50' };
+      if (sub.toLowerCase().includes('dps')) return { label: 'DPS Related', bg: 'bg-orange-50 text-orange-700 border-orange-200/50' };
+      return { label: sub || 'Third Party', bg: 'bg-purple-50 text-purple-700 border-purple-200/50' };
     }
     if (ticket.ownership === 'Service Request') {
-      return { label: 'Service Request', bg: 'bg-violet-100 text-violet-800 border-violet-200' };
+      return { label: 'Service Request', bg: 'bg-violet-50 text-violet-700 border-violet-200/50' };
     }
-    return { label: 'Autovyn', bg: 'bg-indigo-100 text-indigo-800 border-indigo-200' };
+    return { label: 'Autovyn', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200/50' };
   };
 
   return (
-    <div className="glass-panel rounded-2xl p-6 flex flex-col h-full">
+    <div className="glass-panel rounded-2xl p-6 flex flex-col h-full border border-slate-200/60 bg-white/70">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <div>
           <h3 className="text-lg font-bold text-slate-900">Tickets Dump Log</h3>
@@ -72,11 +72,11 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
               placeholder="Search ID, desc..."
               value={searchTerm}
               onChange={e => { setSearchTerm(e.target.value); setCurrentPage(1); }}
-              className="bg-white border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-sm text-slate-800 focus:outline-none focus:border-indigo-500 w-[180px] md:w-[220px] shadow-sm"
+              className="bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-sm text-slate-800 focus:outline-none focus:border-indigo-500 w-[180px] md:w-[220px] shadow-sm transition-all"
             />
           </div>
 
-          <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-xl px-3 py-1.5 shadow-sm">
+          <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 shadow-sm">
             <Filter className="w-3.5 h-3.5 text-slate-400" />
             <select
               value={statusFilter}
@@ -89,7 +89,7 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
             </select>
           </div>
 
-          <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-xl px-3 py-1.5 shadow-sm">
+          <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 shadow-sm">
             <select
               value={categoryFilter}
               onChange={e => { setCategoryFilter(e.target.value); setCurrentPage(1); }}
@@ -106,7 +106,7 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
 
       {/* Table Container */}
       <div className="flex-1 overflow-x-auto min-h-[360px]">
-        {paginatedTickets.length === 0 ? (
+        {filteredTickets.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-[300px] text-slate-400">
             <AlertCircle className="w-8 h-8 mb-2" />
             <span>No tickets found matching current filters</span>
@@ -114,7 +114,7 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
         ) : (
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-slate-100 text-slate-400 text-xs font-semibold uppercase tracking-wider">
+              <tr className="border-b border-slate-100 text-slate-450 text-xs font-semibold uppercase tracking-wider">
                 <th className="py-3 px-4">Ticket No.</th>
                 <th className="py-3 px-4">Date</th>
                 <th className="py-3 px-4">Description</th>
@@ -123,14 +123,14 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
                 <th className="py-3 px-4 text-center">Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-sm text-slate-700">
+            <tbody className="divide-y divide-slate-100 text-sm text-slate-600">
               {paginatedTickets.map((ticket, index) => {
                 const teamInfo = getTeamLabelAndColor(ticket);
                 return (
-                  <tr key={ticket['Ticket No.'] || index} className="hover:bg-slate-50 transition-colors">
+                  <tr key={ticket['Ticket No.'] || index} className="hover:bg-slate-50/50 transition-colors">
                     <td className="py-3.5 px-4 font-mono font-semibold text-slate-900">{ticket['Ticket No.']}</td>
-                    <td className="py-3.5 px-4 text-xs whitespace-nowrap">{ticket.Date}</td>
-                    <td className="py-3.5 px-4 max-w-[280px] truncate" title={ticket['Issue Discription']}>
+                    <td className="py-3.5 px-4 text-xs whitespace-nowrap text-slate-500">{ticket.Date}</td>
+                    <td className="py-3.5 px-4 max-w-[280px] truncate text-slate-800 font-medium" title={ticket['Issue Discription']}>
                       {ticket['Issue Discription']}
                     </td>
                     <td className="py-3.5 px-4 text-xs text-slate-500">{ticket.Category}</td>
@@ -142,13 +142,13 @@ export const TicketList: React.FC<TicketListProps> = ({ tickets }) => {
                     <td className="py-3.5 px-4 text-center">
                       <span className={`inline-flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded-lg ${
                         ticket.Status === 'Resolved' 
-                          ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
-                          : 'bg-rose-50 text-rose-700 border border-rose-200'
+                          ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' 
+                          : 'bg-rose-50 text-rose-700 border border-rose-200/60'
                       }`}>
                         {ticket.Status === 'Resolved' ? (
-                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                         ) : (
-                          <AlertCircle className="w-3.5 h-3.5 animate-pulse" />
+                          <AlertCircle className="w-3.5 h-3.5 text-rose-600 animate-pulse" />
                         )}
                         {ticket.Status}
                       </span>
