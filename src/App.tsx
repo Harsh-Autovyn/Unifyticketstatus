@@ -170,7 +170,6 @@ export default function App() {
 
   const pctResolvedCore = (donutResolvedCore / total) * 100 || 0;
   const pctResolvedSr = (donutResolvedSr / total) * 100 || 0;
-  const pctPending = (donutPending / total) * 100 || 0;
 
   return (
     <div className="min-h-screen bg-[#F0F4F8] text-slate-900 font-sans pb-12 selection:bg-indigo-100 selection:text-indigo-900">
