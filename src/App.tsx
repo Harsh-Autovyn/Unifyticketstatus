@@ -118,7 +118,7 @@ function App() {
   // ── Core KPIs ─────────────────────────────────────────────────────────────
   const total = filteredTickets.length;
   const resolved = filteredTickets.filter(t => t.Status === 'Resolved').length;
-  const pending = filteredTickets.filter(t => t.Status === 'Pending').length;
+  const pending = filteredTickets.filter(t => t.Status === 'Pending' && t.ownership !== 'Service Request').length;
 
   // ── Ownership split ───────────────────────────────────────────────────────
   const autovynTickets = filteredTickets.filter(t => t.ownership === 'Autovyn');
@@ -334,7 +334,7 @@ function App() {
             <StatusChart
               resolved={resolved - serviceRequestResolved}
               pending={pending}
-              serviceRequests={serviceRequestResolved}
+              serviceRequests={serviceRequestTickets.length}
               totalTickets={total}
               totalResolved={resolved}
             />
