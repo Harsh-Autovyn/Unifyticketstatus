@@ -164,11 +164,12 @@ export default function App() {
   });
 
   // Donut chart logic
-  const donutResolved = nonSrResolved;
-  const donutPending = nonSrPending;
-  const donutSr = srTickets.length;
+  const donutResolvedCore = nonSrResolved;
+  const donutResolvedSr = srResolved;
+  const donutPending = totalPending;
 
-  const pctResolved = (donutResolved / total) * 100 || 0;
+  const pctResolvedCore = (donutResolvedCore / total) * 100 || 0;
+  const pctResolvedSr = (donutResolvedSr / total) * 100 || 0;
   const pctPending = (donutPending / total) * 100 || 0;
 
   return (
@@ -340,9 +341,9 @@ export default function App() {
                 className="w-40 h-40 rounded-full flex items-center justify-center relative shadow-[inset_0_4px_15px_rgba(0,0,0,0.1)] transition-transform duration-700 hover:scale-[1.02]"
                 style={{
                   background: `conic-gradient(
-                    #10b981 0% ${pctResolved}%, 
-                    #f43f5e ${pctResolved}% ${pctResolved + pctPending}%, 
-                    #8b5cf6 ${pctResolved + pctPending}% 100%
+                    #10b981 0% ${pctResolvedCore}%, 
+                    #8b5cf6 ${pctResolvedCore}% ${pctResolvedCore + pctResolvedSr}%, 
+                    #f43f5e ${pctResolvedCore + pctResolvedSr}% 100%
                   )`
                 }}
               >
@@ -354,9 +355,9 @@ export default function App() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 text-[10px] font-bold text-slate-500 mt-4 bg-slate-50/50 p-3 rounded-2xl border border-slate-100">
-              <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-gradient-to-br from-emerald-400 to-emerald-500 shadow-sm shadow-emerald-500/30 rounded-md"></div><span className="text-slate-700">Resolved:</span> {donutResolved}</div>
+              <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-gradient-to-br from-emerald-400 to-emerald-500 shadow-sm shadow-emerald-500/30 rounded-md"></div><span className="text-slate-700">Resolved (Core):</span> {donutResolvedCore}</div>
+              <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-gradient-to-br from-purple-400 to-purple-500 shadow-sm shadow-purple-500/30 rounded-md"></div><span className="text-slate-700">Resolved (SR):</span> {donutResolvedSr}</div>
               <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-gradient-to-br from-rose-400 to-rose-500 shadow-sm shadow-rose-500/30 rounded-md"></div><span className="text-slate-700">Pending:</span> {donutPending}</div>
-              <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-gradient-to-br from-purple-400 to-purple-500 shadow-sm shadow-purple-500/30 rounded-md"></div><span className="text-slate-700">SR:</span> {donutSr}</div>
             </div>
           </div>
 
